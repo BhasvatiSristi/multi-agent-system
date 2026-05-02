@@ -15,4 +15,4 @@ def run_pipeline(topic:str)->dict:
     })
     state["search_results"] = search_result['messages'][-1].content
 
-    print("\n search result ",state['search_results'])v
+    print("\n search result ",state['search_results'])
