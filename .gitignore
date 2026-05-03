@@ -6,3 +6,6 @@ env/
 # Local environment files
 .env
 .env.*
+
+__pycache__/
+*.pyc

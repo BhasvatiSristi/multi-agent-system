@@ -1,5 +1,5 @@
 from langchain.agents import create_agent
-from langchain_mistral import ChatMistralAI
+from langchain_mistralai import ChatMistralAI
 from tools import web_search, web_scrape
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -19,7 +19,7 @@ def build_search_agent():
 def build_reader_agent():
     return create_agent(
         model = llm,
-        tools = [scrape_url]
+        tools = [web_scrape]
     )
 
 writer_prompt = ChatPromptTemplate.from_messages([
